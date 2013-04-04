@@ -1,50 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Tinitus Notched Music Generator</title>
-<meta name="viewport" content="width=1000">
-<style>
-body { margin: 0; font-family: sans-serif; }
-canvas { cursor: col-resize; }
-
-html.hover #hover {
-  display: block;
-  border: 3px dashed #ccc;
-  height: 200px;
-  margin-top: 20px;
-  border-radius: 20px;
-}
-
-#hover {
-  display: none;
-  
-}
-
-body {
-  margin: 20px; 
-  background: white;
-}
-
-input[type=range], canvas {
-  display: block;
-  margin: 0 auto;
-}</style>
-</head>
-<body>
-<select id="type">
-  <option value=0>Sine</option>
-  <option value=1>Square</option>
-  <option value=2>Sawtooth</option>
-  <option value=3>Triangle </option>
-</select>
-<button id="oscillator">Start Oscillator</button>
-<button id="noise">Start White Noise</button>
-<button id="notch">Notch</button>
-<button id="stop">Stop</button>
-<br>
-<canvas id="canvas"></canvas>
-<br>
-<input id="freqSlider" type="range" min=0 max=20000 step=1 tabindex=1>
-<br>
-<span id="echo"></span>
-<script src="tinitus.js"></script>
+  <head>
+    <title>Notched Audio Generator</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="#">Notched Music for Tinitus</a>
+            <ul id="nav" class="nav">
+              <li><a data-toggle="tab" href="#find">Find</a></li>
+              <li><a data-toggle="tab" href="#notch">Notch</a></li>
+            </ul>
+            <ul class="pull-right nav">
+              <li><button id="mute" class="btn active" data-toggle="button"><i class="icon-volume-off"></i> Mute</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <canvas id="frequency"></canvas>
+        <input type="range" min="0" max="20000">
+        <h1>Frequency: <span id="freq">440</span>hz</h1>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/raf.js"></script>
+    <script src="js/dnd.js"></script>
+    <script src="js/audio-node.js"></script>
+    <script src="js/generate.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/find.js"></script>
+  </body>
+</html>
