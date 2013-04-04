@@ -1,0 +1,18 @@
+{
+  "name": "tinitus",
+  "version": "0.0.1",
+  "description": "Application to help identify tinitus range, and create notched music (in mp3 format) to help *reduce* tinitus level",
+  "main": "index.js",
+  "dependencies": {
+    "lame": "~1.0.0",
+    "multipart": "~0.1.5",
+    "connect": "~2.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Remy Sharp",
+  "license": "http://rem.mit-license.org"
+}

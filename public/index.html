@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<title>Tinitus Notched Music Generator</title>
+<meta name="viewport" content="width=1000">
+<style>
+body { margin: 0; font-family: sans-serif; }
+canvas { cursor: col-resize; }
+
+html.hover #hover {
+  display: block;
+  border: 3px dashed #ccc;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+#hover {
+  display: none;
+  
+}
+
+body {
+  margin: 20px; 
+  background: white;
+}
+
+input[type=range], canvas {
+  display: block;
+  margin: 0 auto;
+}</style>
+</head>
+<body>
+<select id="type">
+  <option value=0>Sine</option>
+  <option value=1>Square</option>
+  <option value=2>Sawtooth</option>
+  <option value=3>Triangle </option>
+</select>
+<button id="oscillator">Start Oscillator</button>
+<button id="noise">Start White Noise</button>
+<button id="notch">Notch</button>
+<button id="stop">Stop</button>
+<br>
+<canvas id="canvas"></canvas>
+<br>
+<input id="freqSlider" type="range" min=0 max=20000 step=1 tabindex=1>
+<br>
+<span id="echo"></span>
+<script src="tinitus.js"></script>
