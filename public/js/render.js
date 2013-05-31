@@ -72,8 +72,6 @@ function update() {
   }
 
   ctx.clearRect(0,0,width,ctx.canvas.height);
-  //ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-  //ctx.fillRect(0,0,width,ctx.canvas.height);
 
   var last = {}, start = {}, x, y;
 

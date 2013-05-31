@@ -41,17 +41,11 @@ function init() {
       // generate
       var wn = generateWhiteNoise();
       notch = new Notch(document.querySelector('input').value, 3);
-      // var n1 = singleNotch(440);
-      // var n2 = singleNotch(440);
-      // notch.allpass();
-      // n1.input = wn;
-      // n2.input = n1;
-      // find.analyser.input = n2;
       notch.input = wn;
-      // find.analyser.input = notch.notches[notch.notches.length - 1];
+
+      // need to set to null, because notch isn't an audio node, it's a custom object without .input
       find.analyser.input = null;
       notch.output = find.analyser;
-      // find.analyser.input = wn;
     }
   });
 
