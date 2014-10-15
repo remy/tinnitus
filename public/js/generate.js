@@ -1,7 +1,7 @@
 // taken from https://github.com/mattdiamond/synthjs
 function generateWhiteNoise(stereo, bufSize){
   bufSize = bufSize || 2048;
-  var node = audio.createJavaScriptNode(bufSize, 1, 2);
+  var node = audio.createScriptProcessor(bufSize, 1, 2);
   node.onaudioprocess = function(e){
     var outBufferL = e.outputBuffer.getChannelData(0);
     var outBufferR = e.outputBuffer.getChannelData(1);
